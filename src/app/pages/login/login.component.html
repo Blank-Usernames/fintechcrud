@@ -1,0 +1,12 @@
+<div class="content-container">
+    <form>
+        <label for="email">Login</label><br>
+        <input class="input-simples" id="email" name="email" type="email" placeholder="Digite seu email" [(ngModel)]="login" (keyup)="validarFormulario()"/>
+        <label for="input-senha">Senha</label><br>
+        <input class="input-simples" id="input-senha" name="input-senha" type="password"
+            placeholder="Digite sua senha" [(ngModel)]="senha" (keyup)="validarFormulario()"/>
+        <button class="input-submeter" [disabled]="isDisabled" (click)="fazerLogin()">
+            Confirmar
+        </button>
+    </form>
+</div>
