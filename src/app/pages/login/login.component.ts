@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Route,Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,6 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
+  constructor(private router: Router) { };
+
   login: string = "";
   senha: string = "";
   isDisabled: boolean = true;
@@ -22,11 +26,13 @@ export class LoginComponent {
     }
   }
 
+  //Verifico se o usuário e senha são válidos
   fazerLogin() {
-    if(this.login == "admin@email.com" && this.senha == "123") {
-      alert(`[LOGIN] SUCESS! Bem Vindo: ${this.login}`)
+    if (this.login === 'admin@email.com' && this.senha === '123') {
+      alert(`Bem-vindo ${this.login}!`);
+      this.router.navigate(['/admin-clientes-listar']);
     } else {
-      alert("[LOGIN] INVALID CREDENTIALS")
+      alert('Dados inválidos');
     }
   }
 

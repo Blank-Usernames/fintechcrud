@@ -1,0 +1,32 @@
+<div class="content-container">
+    <form>
+        <h1>Cadastro de Cliente</h1>
+        <p class="descricao">
+            Preencha os dados abaixo para criar seu cadastro.
+        </p>
+        <label for="cpf">CPF</label>
+        <input class="input-simples" id="cpf" name="cpf" type="text" placeholder="Digite seu CPF"
+            [(ngModel)]="cliente.cpf" />
+        <label for="nome">Nome</label>
+        <input class="input-simples" id="nome" name="nome" type="text" placeholder="Digite seu nome"
+            [(ngModel)]="cliente.nome" />
+        <label for="sobrenome">Sobrenome</label>
+        <input class="input-simples" id="sobrenome" name="sobrenome" type="text" placeholder="Digite seu sobrenome"
+            [(ngModel)]="cliente.sobrenome" />
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input class="input-simples" id="dataNascimento" name="dataNascimento" type="date"
+            [(ngModel)]="cliente.dataNascimento" />
+        <label for="email">Email</label>
+        <input class="input-simples" id="email" name="email" type="email" placeholder="Digite seu email"
+            [(ngModel)]="cliente.email" />
+        <label for="senha">Senha</label>
+        <input class="input-simples" id="senha" name="senha" type="password" placeholder="Digite sua senha"
+            [(ngModel)]="cliente.senha" />
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input class="input-simples" id="confirmarSenha" name="confirmarSenha" type="password"
+            placeholder="Confirme sua senha" [(ngModel)]="cliente.confirmarSenha" />
+        <button type="button" class="input-submeter" (click)="cadastrar()">
+            Cadastrar
+        </button>
+    </form>
+</div>

@@ -1,0 +1,138 @@
+:host {
+    display: block;
+}
+
+.home {
+    width: 100%;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space -between;
+    width: 80%;
+    min-height: 420px;
+    margin: 50px auto 0;
+}
+
+.home-text {
+    width: 50%;
+}
+
+.home-subtitle {
+    color: #0055b8;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.home-text h1 {
+    margin: 15px 0;
+    color: #172033;
+    font-size: 40px;
+    line-height: 1.15;
+    text-align: left;
+}
+
+.home-text p {
+    max-width: 520px;
+    margin-bottom: 30px;
+    color: #475569;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.input-submeter {
+    width: auto;
+    padding: 12px 24px;
+    color: #ffffff;
+    background-color: #0055b8;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.input-submeter:hover {
+    background-color: #003b7a;
+}
+
+/* Card principal */
+.saldo-container {
+    width: 40%;
+}
+
+.saldo-card {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.saldo-titulo {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.saldo-card>strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #172033;
+    font-size: 28px;
+}
+
+.saldo-card>small {
+    color: #059669;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Cards internos */
+.saldo-detalhes {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.saldo-item {
+    flex: 1;
+    padding: 15px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+}
+
+.saldo-item span {
+    display: block;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 13px;
+}
+
+.saldo-item strong {
+    color: #172033;
+    font-size: 16px;
+}
+
+@media (max-width: 700px) {
+
+    .content-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 90%;
+        padding: 40px 0;
+
+    }
+
+    .home-text,
+    .saldo-container {
+        width: 100%;
+
+    }
+
+    .saldo-container {
+        margin-top: 40px;
+
+    }
+}
