@@ -24,8 +24,8 @@
             [(ngModel)]="cliente.senha" />
         <label for="confirmarSenha">Confirmar Senha</label>
         <input class="input-simples" id="confirmarSenha" name="confirmarSenha" type="password"
-            placeholder="Confirme sua senha" [(ngModel)]="cliente.confirmarSenha" />
-        <button type="button" class="input-submeter" (click)="cadastrar()">
+            placeholder="Confirme sua senha" [(ngModel)]="confirmarSenha" />
+        <button type="button" class="input-submeter" (click)="salvar()">
             Cadastrar
         </button>
     </form>
