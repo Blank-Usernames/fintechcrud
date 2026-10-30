@@ -4,6 +4,12 @@
         <p class="descricao">
             Preencha os dados abaixo para criar seu cadastro.
         </p>
+
+        @if (clienteId) {
+        <label for="id">ID</label>
+        <input class="input-simples" id="id" name="id" type="text" [ngModel]="cliente.id" disabled />
+        }
+        
         <label for="cpf">CPF</label>
         <input class="input-simples" id="cpf" name="cpf" type="text" placeholder="Digite seu CPF"
             [(ngModel)]="cliente.cpf" />

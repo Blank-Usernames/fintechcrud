@@ -17,11 +17,20 @@ export class ClienteService {
     return this.clienteHTTP.get<Cliente[]>(this.API);
   }
 
-  incluir(cliente:Cliente): Observable<Cliente> {
+  incluir(cliente: Cliente): Observable<Cliente> {
     return this.clienteHTTP.post<Cliente>(this.API, cliente);
   }
 
-  excluir(id:string): Observable<void> {
+  excluir(id: string): Observable<void> {
     return this.clienteHTTP.delete<void>(`${this.API}/${id}`)
   }
+
+  buscarPorId(id: string): Observable<Cliente> {
+    return this.clienteHTTP.get<Cliente>(`${this.API}/${id}`);
+  }
+
+  editar(cliente: Cliente): Observable<Cliente> {
+    return this.clienteHTTP.put<Cliente>(`${this.API}/${cliente.id}`, cliente);
+  }
+
 }
